@@ -21,8 +21,7 @@ export const Hero = () => {
 
   return (
     <>
-      <img src={heroPic}></img>
-      <S.HeroBlock>
+      <S.HeroBlock heroPic={heroPic}>
         {/* <S.HeaderContainer>
           <BarLogo></BarLogo>
           <HeroPic></HeroPic>

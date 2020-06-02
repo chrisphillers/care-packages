@@ -30,6 +30,7 @@ export const HeroText = styled.div`
 `;
 
 export const HeroBlock = styled.div`
+  background-image: ${({ heroPic }) => heroPic};
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
