@@ -3,25 +3,19 @@ import * as S from "./donate.styles";
 
 const localData = {
   donate: {
-    title: "Donate Now",
-    sub_title: "Get the Drinks In",
-    sub_sub_title: "The drink $ value amount will be your donation",
-    donations: [
-      { name: "Beer and a Shot", price: 10 },
-      { name: "Tequila Rocks", description: "Top-shelf", price: 25 },
-      {
-        name: "Two Negronis",
-        description: "New Yorkers Love Negronis",
-        price: 50,
-      },
-      { name: "Pop a Bottle", description: "Because Why not?", price: 100 },
-      { name: "Other", price: "$$" },
-    ],
+    title: "Donate",
+    sub_title:
+      "By donating just £5 you can provide a toiletries style Care Package for people in hospital. The packs are a small and practical way of showing care and love for the patients through this unsettling time.",
   },
 };
 
 export const DonateText = () => {
-  const { title, sub_title, sub_sub_title, donations } = localData.donate;
+  const { title, sub_title } = localData.donate;
 
-  return <S.DonateTextContainer>DONATE</S.DonateTextContainer>;
+  return (
+    <S.DonateTextContainer>
+      <h1>{title}</h1>
+      <div>{sub_title}</div>
+    </S.DonateTextContainer>
+  );
 };

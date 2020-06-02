@@ -20,13 +20,23 @@ export const HeroText = () => {
   const { hero_title, text_line1, text_line2 } = localdata.hero;
 
   return (
-    <>
+    <S.HeroTextContainer>
       <S.HeroText>
-        Being admitted to hospital with Covid-19 can be a very scary and
-        isolating time for people. As families aren’t able to visit patients,
-        they don’t have all the nice things that their families would normally
-        be able to bring in for them. With your donations we will provide Care
-        Packages to as many patients across London as possible.
+        <p>
+          Being admitted to hospital with Covid-19 can be a very scary and
+          isolating time for people.
+        </p>
+
+        <p>
+          As families aren’t able to visit patients, they don’t have all the
+          nice things that their families would normally be able to bring in for
+          them.
+        </p>
+
+        <p>
+          With your donations we will provide Care Packages to as many patients
+          across London as possible.
+        </p>
         {/* <S.HeaderContainer>
           <BarLogo></BarLogo>
           <HeroPic></HeroPic>
@@ -47,6 +57,6 @@ export const HeroText = () => {
           <InfoArrow></InfoArrow>
         </S.HeroInfo> */}
       </S.HeroText>
-    </>
+    </S.HeroTextContainer>
   );
 };

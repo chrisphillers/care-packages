@@ -9,6 +9,9 @@ import { theme } from "../styles/theme";
 import { Header } from "../components/header";
 import { HeroText } from "../components/carepackagehome/herotext";
 import { DonateText } from "../components/carepackagehome/donatetext";
+import { WaysToHelpText } from "../components/carepackagehome/waystohelptext";
+import { WaysToHelp } from "../components/carepackagehome/waystohelp";
+import { Bye } from "../components/carepackagehome/bye";
 
 const Home = () => {
   return (
@@ -19,7 +22,10 @@ const Home = () => {
         <HeroText></HeroText>
         <DonateText></DonateText>
         <Donate></Donate>
+        <WaysToHelpText></WaysToHelpText>
+        <WaysToHelp></WaysToHelp>
         <InstaGallery></InstaGallery>
+        <Bye></Bye>
       </Layout>
     </ThemeProvider>
   );

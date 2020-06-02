@@ -9,13 +9,13 @@ module.exports = {
     },
   },
   plugins: [
-    {
-      resolve: "gatsby-source-filesystem",
-      options: {
-        path: `${__dirname}/static/assets/images`,
-        name: "assets",
-      },
-    },
+    // {
+    //   resolve: "gatsby-source-filesystem",
+    //   options: {
+    //     path: `${__dirname}/static/assets/images`,
+    //     name: "assets",
+    //   },
+    // },
 
     {
       resolve: "gatsby-source-filesystem",

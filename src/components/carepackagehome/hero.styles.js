@@ -13,19 +13,30 @@ import styled from "styled-components";
 //   document.documentElement.style.setProperty("--vh", `${vh}px`)
 // })
 
-export const HeroText = styled.div`
+export const HeroTextContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: ${theme.brandSecondary};
+  /* align-content: center; */
+  padding: 0 1rem;
   height: 500px;
+`;
+
+export const HeroText = styled.div`
   color: white;
+  max-width: 800px;
+  line-height: 2.4rem;
 `;
 
 export const HeroBlock = styled.div`
+  background-color: #ffffff;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-content: center;
   align-items: center;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
   height: 100vh;
   height: calc(var(--vh, 1vh) * 100);
   height: calc(100vh - 80px);

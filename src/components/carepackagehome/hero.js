@@ -1,8 +1,7 @@
 import React from "react";
 import * as S from "./hero.styles";
 import InfoArrow from "../../../content/assets/svgs/info-arrow.svg";
-
-// import heroPic from "../../../content/assets/images/hero.png";
+import heroPic from "../../../content/assets/images/hero.png";
 
 const localdata = {
   header: {
@@ -22,6 +21,7 @@ export const Hero = () => {
 
   return (
     <>
+      <img src={heroPic}></img>
       <S.HeroBlock>
         {/* <S.HeaderContainer>
           <BarLogo></BarLogo>

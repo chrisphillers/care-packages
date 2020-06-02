@@ -38,12 +38,13 @@ const SiteWrapper = styled.div`
 
   justify-content: center;
   text-align: center;
+  background-color: lightgrey;
 `;
 
 const Centre = styled.div`
   width: 100%;
   max-width: 1440px;
-  padding: 0 1.4rem;
+  /* padding: 0 1.4rem; */
 
   @media (min-width: 1025px) {
   }

@@ -20,14 +20,23 @@ const localData = {
 };
 
 export const Donate = () => {
-  const { title, sub_title, sub_sub_title, donations } = localData.donate;
+  const {
+    donate_sub_title_1,
+    donate_sub_title_2,
+    donate_title_2,
+    donate_title_1,
+    donations,
+  } = localData.donate;
 
   return (
     <S.DonateContainer>
       <S.Title>
-        <h1>{title}</h1>
-        <p>{sub_title}</p>
-        <div className="subsub">{sub_sub_title}</div>
+        <h2>{donate_title_1}</h2>
+        <p>{donate_sub_title_1}</p>
+      </S.Title>
+      <S.Title>
+        <h2>{donate_title_2}</h2>
+        <p>{donate_sub_title_2}</p>
       </S.Title>
       <S.Donations>
         {donations.map((donation) => {
