@@ -1,5 +1,6 @@
 import { theme } from "../../styles/theme";
 import styled from "styled-components";
+import heroPic from "../../../content/assets/images/hero.png";
 
 // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
 // let vh = window.innerHeight * 0.01
@@ -27,11 +28,24 @@ export const HeroText = styled.div`
   color: white;
   max-width: 800px;
   line-height: 2.4rem;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  p {
+    font-size: calc(16px + (43 - 16) * ((100vw - 300px) / (1920 - 300)));
+  }
 `;
 
 export const HeroBlock = styled.div`
-  background-image: ${({ heroPic }) => heroPic};
-  background-color: #ffffff;
+ background-image: url(${heroPic});
+  /* background-repeat: no-repeat; */
+  /* background-size: cover;  */
+  background-repeat:no-repeat;
+background-position: center center;
+  /* background: url(${heroPic}) no-repeat contain center fixed;  */
+
+  /* background-position: cover; */
+  /* background-color: #ffffff; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;

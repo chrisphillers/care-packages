@@ -1,9 +1,9 @@
 import React from "react";
 import styled from "styled-components";
 import { theme } from "../../../src/styles/theme";
-// import Twitter from "../../content/assets/svgs/twitter.svg";
-// import Facebook from "../../content/assets/svgs/facebook.svg";
-// import Instagram from "../../content/assets/svgs/instagram.svg";
+import Twitter from "../../../content/assets/svgs/twitter.svg";
+import Facebook from "../../../content/assets/svgs/facebook.svg";
+import Instagram from "../../../content/assets/svgs/instagram.svg";
 
 const data = {
   waystohelp: [
@@ -11,18 +11,21 @@ const data = {
       title: "share",
       text: "Sharing any of our social media pages is a great way to help",
       color: theme.brandPrimary,
+      share: true,
     },
     {
       title: "art",
       text:
         "We try and include a small artwork in each of our packaged, so if you’re an artist who would like to get involved please message us!",
       color: theme.brandSecondary,
+      share: false,
     },
     {
       title: "production",
       text:
         "If you are a brand that can offer a sustainable product donations then please get in touch",
       color: theme.brandTertiary,
+      share: false,
     },
   ],
 };
@@ -60,16 +63,50 @@ const HelpItem = styled.div`
   /* width: 28%; */
   /* min-width: 300px; */
   /* justify-content: space-evenly; */
-  background-color: ${(props) => props.content.color};
+  background-color: ${(props) => props.content?.color};
   color: white;
   h2 {
     text-transform: capitalise;
   }
 `;
 
+export const SocialLogos = styled.div`
+  /* margin: 1rem;
+  padding: 2rem; */
+  padding: 1rem;
+
+  svg {
+    :hover {
+      fill: white;
+    }
+  }
+
+  svg > * {
+    :hover {
+      fill: white;
+    }
+  }
+
+  /* display: none; */
+`;
+
 export const WaysToHelpItem = (props) => (
   <HelpItem {...props}>
     <h1>{props.content.title}</h1>
-    <h2>{props.content.text}</h2>
+    <div>
+      <h2>{props.content.text}</h2>
+      {props.content?.share && (
+        <SocialLogos>
+          {/* <img src="../../content/assets/svgs/twitter.svg"></img> */}
+          <Twitter height="2.3rem"></Twitter>
+          <a href="https://www.facebook.com/Care-Packages-104068491271279/">
+            <Facebook height="2.3rem"></Facebook>
+          </a>
+          <a href="https://www.instagram.com/uk.care.packages/">
+            <Instagram height="2.3rem"></Instagram>
+          </a>
+        </SocialLogos>
+      )}
+    </div>
   </HelpItem>
 );

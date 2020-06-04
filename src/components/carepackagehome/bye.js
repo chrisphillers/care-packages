@@ -1,21 +1,17 @@
 import React from "react";
 import * as S from "./donate.styles";
 import styled from "styled-components";
+import lush from "../../../content/assets/images/lush2.png";
 
 export const Bye = () => (
   <FooterContainer>
-    <div>Take care of yourselves and stay home!</div>
-    <div>💙</div>
-
+    <h2>Take care of yourselves and stay home!</h2>
+    <h1>💙</h1>
     <div>With kind support from:</div>
-    <ul>
-      <li>
-        <img></img>
-      </li>
-      <li>
-        <img></img>
-      </li>
-    </ul>
+    <div>
+      {" "}
+      <img src={lush} width="140px"></img>
+    </div>
   </FooterContainer>
 );
 

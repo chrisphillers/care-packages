@@ -4,7 +4,8 @@ import * as S from "./donate.styles";
 const localData = {
   donate: {
     donate_title_1: "Bank Transfer",
-    donate_sub_title_1: "Account No: 43174469 Sort code: 54-41-00",
+    donate_sub_title_1: "Account No: 43174469",
+    donate_sub_title_a1: "Sort code: 54-41-00",
     donate_title_2: "Paypal",
     donate_sub_title_2:
       "Select the ‘sending to a friend or family’ option to prevent PayPal taking fees from your donation",
@@ -14,7 +15,7 @@ const localData = {
       { name: "3 Care Packages", price: 15 },
       { name: "4 Care Packages", price: 20 },
       { name: "5 Care Packages", price: 25 },
-      { name: "As many Care packages as you want", price: "£££" },
+      { name: "As many Care packages as you want", price: "££" },
     ],
   },
 };
@@ -23,6 +24,7 @@ export const Donate = () => {
   const {
     donate_sub_title_1,
     donate_sub_title_2,
+    donate_sub_title_a1,
     donate_title_2,
     donate_title_1,
     donations,
@@ -33,6 +35,7 @@ export const Donate = () => {
       <S.Title>
         <h2>{donate_title_1}</h2>
         <p>{donate_sub_title_1}</p>
+        <p>{donate_sub_title_a1}</p>
       </S.Title>
       <S.Title>
         <h2>{donate_title_2}</h2>

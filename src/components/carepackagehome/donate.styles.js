@@ -6,9 +6,11 @@ export const DonateContainer = styled.div`
   background-color: ${theme.brandPrimary};
   display: flex;
   flex-direction: column;
-  padding: 1rem;
+  padding: 3rem 1rem;
+
   @media (min-width: 600px) {
     justify-self: center;
+    /* background-color: hotpink; */
   }
 `;
 
@@ -22,6 +24,13 @@ export const DonateTextContainer = styled.div`
   justify-content: space-evenly;
   /* justify-content: center; */
   align-items: center;
+
+  /* display: flex; */
+  /* justify-content: space-around; */
+  /* flex-direction: column; */
+
+  font-size: calc(16px + (43 - 16) * ((100vw - 300px) / (1920 - 300)));
+
   > * {
     /* color: white; */
     max-width: 800px;
@@ -46,7 +55,7 @@ export const Title = styled.div`
   }
   p {
     color: white;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
     margin: 0.4rem;
     font-size: calc(16px + (24 - 16) * ((100vw - 300px) / (1920 - 300)));
   }
@@ -72,6 +81,9 @@ export const Donation = styled.a`
   align-items: center;
   color: white;
 
+  :visited {
+  }
+
   :hover {
     h2 {
       color: white;
@@ -79,6 +91,10 @@ export const Donation = styled.a`
 
     .amount {
       background-color: ${theme.brandPrimary};
+    }
+
+    h3 {
+      color: white;
     }
   }
 
@@ -107,7 +123,7 @@ export const Amount = styled.div`
   display: flex;
 
   background-color: white;
-  color: black;
+  color: ${theme.brandPrimary};
   height: 30px;
   width: 60px;
 

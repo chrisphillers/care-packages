@@ -2,7 +2,7 @@ import React from "react";
 import { theme } from "../../styles/theme";
 import styled from "styled-components";
 import instafeed from "instafeed-lite";
-
+import Instagram from "../../../content/assets/svgs/instagram.svg";
 const localData = {
   lowerInfo: {
     title: "Follow our updates @uk.care.packages",
@@ -66,7 +66,10 @@ export const InstaGallery = () => {
   const { title, sub_title, posts } = localData.lowerInfo;
   return (
     <LowerInfoContainer>
-      <Title>{title}</Title>
+      <TitleArea href="https://www.instagram.com/uk.care.packages/">
+        <Instagram height="2em"></Instagram>
+        <Title>{title}</Title>
+      </TitleArea>
       <Posts>
         {posts.slice(0, 4).map((post) => {
           return (
@@ -82,19 +85,34 @@ export const InstaGallery = () => {
   );
 };
 
+export const TitleArea = styled.a`
+  cursor: pointer;
+`;
+
 export const LowerInfoContainer = styled.div`
   padding: 4rem 0;
   text-transform: capitalize;
   background: white;
 `;
 export const Posts = styled.div`
-  > * > {
+  padding: 2rem;
+  /* > * > {
     flex: 1;
-  }
+  } */
 `;
 export const Title = styled.div`
   font-size: calc(20px + (35 - 20) * ((100vw - 300px) / (1920 - 300)));
-  padding-bottom: 2rem;
+  /* padding-bottom: 1rem; */
+  padding: 0 1rem;
+  line-height: 2rem;
+  color: ${theme.brandPrimary};
+  text-decoration: none;
+  :hover {
+    font-weight: 500;
+  }
+  :visited {
+    text-decoration: none;
+  }
 
   @media (min-width: 600px) {
     width: 70vw;
@@ -119,7 +137,12 @@ export const Title = styled.div`
 export const Post = styled.img`
   width: 100%;
   height: auto;
+  padding-top: 1rem;
   /* margin: 1rem; */
+  :hover {
+    opacity: 0.7;
+    /* margin: 1rem; */
+  }
 `;
 
 export const Thanks = styled.div`
