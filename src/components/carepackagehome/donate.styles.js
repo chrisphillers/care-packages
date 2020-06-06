@@ -12,6 +12,10 @@ export const DonateContainer = styled.div`
     justify-self: center;
     /* background-color: hotpink; */
   }
+
+  @media (min-width: 767px) {
+    padding: 2rem 4rem;
+  }
 `;
 
 export const DonateTextContainer = styled.div`
@@ -41,8 +45,8 @@ export const DonateTextContainer = styled.div`
     text-transform: uppercase;
   }
 
-  @media (min-width: 600px) {
-    justify-self: center;
+  @media (min-width: 767px) {
+    padding: 0 4rem;
   }
 `;
 

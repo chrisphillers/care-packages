@@ -21,4 +21,5 @@ export const FooterContainer = styled.div`
   justify-content: space-around;
   height: 500px;
   background-color: white;
+  padding: 0 1rem;
 `;

@@ -68,6 +68,15 @@ const HelpItem = styled.div`
   h2 {
     text-transform: capitalise;
   }
+
+  @media (min-width: 767px) {
+    flex-wrap: wrap;
+    flex: 1;
+    font-size: calc(1px + (43 - 1) * ((100vw - 300px) / (1920 - 300)));
+    line-height: 2.3rem;
+    padding: 1rem;
+    justify-content: space-around;
+  }
 `;
 
 export const SocialLogos = styled.div`

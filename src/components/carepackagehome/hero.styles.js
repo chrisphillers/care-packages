@@ -34,6 +34,9 @@ export const HeroText = styled.div`
   p {
     font-size: calc(16px + (43 - 16) * ((100vw - 300px) / (1920 - 300)));
   }
+  @media (min-width: 767px) {
+    padding: 0 4rem;
+  }
 `;
 
 export const HeroBlock = styled.div`

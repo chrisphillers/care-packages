@@ -19,10 +19,11 @@ export const Header = () => (
   //   // height: "100%",
   // }}
   >
+    {console.log(window.location)}
     <Top>
       <Nav>
-        <div>About us</div>
-        <DonateButton>Donate</DonateButton>
+        <a href="/about-us">About us</a>
+        <DonateButton href="#donate">Donate</DonateButton>
       </Nav>
       <SocialLogos>
         {/* <img src="../../content/assets/svgs/twitter.svg"></img> */}
@@ -81,7 +82,7 @@ export const Top = styled.div`
   justify-content: space-between;
 `;
 
-export const DonateButton = styled.div`
+export const DonateButton = styled.a`
   background-color: ${theme.brandPrimary};
   color: white;
   padding: 0.4rem 1.4rem;
@@ -94,14 +95,16 @@ export const DonateButton = styled.div`
 `;
 
 export const HeaderBlock = styled.header`
-  background-image: url(${heroPic});
   background-color: white;
-  /* background-repeat: no-repeat; */
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  height: 80vh;
+  height: ${window.location.pathname === "/about-us" ? "70px" : "80vh"};
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  padding-bottom: 4rem;
+  background-image: url(${window.location.pathname === "/about-us"
+    ? null
+    : heroPic});
 `;

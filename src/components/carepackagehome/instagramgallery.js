@@ -71,13 +71,13 @@ export const InstaGallery = () => {
         <Title>{title}</Title>
       </TitleArea>
       <Posts>
-        {posts.slice(0, 4).map((post) => {
+        {posts.slice(0, 6).map((post) => {
           return (
-            <div>
+            <PostWrap>
               <a href={post.url}>
                 <Post src={post.image}></Post>
               </a>
-            </div>
+            </PostWrap>
           );
         })}
       </Posts>
@@ -96,9 +96,15 @@ export const LowerInfoContainer = styled.div`
 `;
 export const Posts = styled.div`
   padding: 2rem;
+
   /* > * > {
     flex: 1;
   } */
+  @media (min-width: 767px) {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 `;
 export const Title = styled.div`
   font-size: calc(20px + (35 - 20) * ((100vw - 300px) / (1920 - 300)));
@@ -136,12 +142,31 @@ export const Title = styled.div`
 
 export const Post = styled.img`
   width: 100%;
-  height: auto;
+  /* height: auto; */
   padding-top: 1rem;
   /* margin: 1rem; */
   :hover {
     opacity: 0.7;
     /* margin: 1rem; */
+  }
+
+  @media (min-width: 767px) {
+    /* width: initial; */
+    /* width: 300px; */
+    /* height: 300px; */
+    /* overflow: hidden; */
+  }
+`;
+
+export const PostWrap = styled.div`
+  overflow: hidden;
+  width: 100%;
+  /* height: auto; */
+
+  @media (min-width: 767px) {
+    width: 300px;
+    height: 300px;
+    padding: 1rem;
   }
 `;
 

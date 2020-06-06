@@ -13,7 +13,7 @@ export const DonateText = () => {
   const { title, sub_title } = localData.donate;
 
   return (
-    <S.DonateTextContainer>
+    <S.DonateTextContainer id="donate">
       <h1>{title}</h1>
       <div>{sub_title}</div>
     </S.DonateTextContainer>
