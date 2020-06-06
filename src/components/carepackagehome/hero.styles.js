@@ -32,7 +32,7 @@ export const HeroText = styled.div`
   justify-content: space-around;
   flex-direction: column;
   p {
-    font-size: calc(16px + (43 - 16) * ((100vw - 300px) / (1920 - 300)));
+    font-size: calc(16px + (31 - 16) * ((100vw - 300px) / (1920 - 300)));
   }
   @media (min-width: 767px) {
     padding: 0 4rem;

@@ -33,7 +33,7 @@ export const DonateTextContainer = styled.div`
   /* justify-content: space-around; */
   /* flex-direction: column; */
 
-  font-size: calc(16px + (43 - 16) * ((100vw - 300px) / (1920 - 300)));
+  font-size: calc(16px + (30 - 16) * ((100vw - 300px) / (1920 - 300)));
 
   > * {
     /* color: white; */
@@ -54,7 +54,7 @@ export const Title = styled.div`
   margin-bottom: 3rem;
   h2 {
     text-transform: uppercase;
-    font-size: calc(30px + (70 - 30) * ((100vw - 300px) / (1920 - 300)));
+    font-size: calc(30px + (60 - 30) * ((100vw - 300px) / (1920 - 300)));
     margin: 0;
   }
   p {
@@ -71,7 +71,7 @@ export const Title = styled.div`
   }
 
   @media (min-width: 800px) {
-    margin-bottom: 6rem;
+    margin-bottom: 4rem;
   }
 `;
 

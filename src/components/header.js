@@ -39,13 +39,19 @@ export const Header = () => {
         </Nav>
         <SocialLogos>
           {/* <img src="../../content/assets/svgs/twitter.svg"></img> */}
-          <Twitter></Twitter>
-          <a href="https://www.facebook.com/Care-Packages-104068491271279/">
-            <Facebook></Facebook>
-          </a>
-          <a href="https://www.instagram.com/uk.care.packages/">
-            <Instagram></Instagram>
-          </a>
+          <div>
+            <Twitter></Twitter>
+          </div>
+          <div>
+            <a href="https://www.facebook.com/Care-Packages-104068491271279/">
+              <Facebook></Facebook>
+            </a>
+          </div>
+          <div>
+            <a href="https://www.instagram.com/uk.care.packages/">
+              <Instagram></Instagram>
+            </a>
+          </div>
         </SocialLogos>
       </Top>
       <InfoArrow fill="black" color="black"></InfoArrow>
@@ -58,10 +64,10 @@ export const SocialLogos = styled.div`
   margin: 1rem;
 
   /* padding: 2rem; */
-
+  display: flex;
   svg {
-    width: auto;
-    height: 1.5rem;
+    height: auto;
+    width: 1.5rem;
     margin: 0.2rem;
     :hover {
       fill: white;
@@ -69,6 +75,8 @@ export const SocialLogos = styled.div`
   }
 
   svg > * {
+    /* align-content: center;
+    flex-direction: column; */
     :hover {
       fill: white;
     }
@@ -76,8 +84,8 @@ export const SocialLogos = styled.div`
 
   @media (min-width: 767px) {
     svg {
-      height: 3rem;
-      margin: 0.7rem;
+      width: 2.3rem;
+      margin: 0 0.2rem;
     }
   }
 
@@ -85,9 +93,7 @@ export const SocialLogos = styled.div`
 `;
 
 export const Nav = styled.nav`
-  display: flex;
-  align-items: center;
-  font-size: calc(10px + (40 - 10) * ((100vw - 300px) / (1920 - 300)));
+  font-size: calc(10px + (26 - 10) * ((100vw - 300px) / (1920 - 300)));
   /* justify-content: flex-start; */
   /* margin: 1rem; */
   /* padding: 2rem; */
@@ -113,6 +119,8 @@ export const Nav = styled.nav`
 export const Top = styled.div`
   display: flex;
   justify-content: space-between;
+
+  align-items: center;
 `;
 
 export const DonateButton = styled.a`
@@ -134,12 +142,12 @@ export const HeaderBlock = styled.div`
   background-color: white;
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center -20px;
   height: ${({ aboutUsRender }) => (aboutUsRender ? "70px" : "80vh")};
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-bottom: 4rem;
+  /* padding-bottom: 4rem; */
   background-image: url(${({ aboutUsRender }) =>
     aboutUsRender ? null : heroPic});
 `;

@@ -35,7 +35,7 @@ const localData = {
       },
       {
         image:
-          "https://scontent-frx5-1.cdninstagram.com/v/t50.2886-16/96054568_1336577496548050_8989679371716716672_n.mp4?_nc_ht=scontent-frx5-1.cdninstagram.com&_nc_cat=110&_nc_ohc=IAAyVAN-TLcAX_VY9jL&oe=5ED83FF4&oh=fd53e59d7c1a7417816aae69a4543327",
+          "https://scontent-frt3-2.cdninstagram.com/v/t51.2885-15/e35/p480x480/96358860_918261308619781_7571877121318044639_n.jpg?_nc_ht=scontent-frt3-2.cdninstagram.com&_nc_cat=101&_nc_ohc=Ck9QAg3QsCwAX9gIuBd&oh=2c545e4ed60c1de1db5483277952422f&oe=5EDE1913",
         url: "https://www.instagram.com/p/CAF1vqyp5_3/",
       },
       {
@@ -45,18 +45,13 @@ const localData = {
       },
       {
         image:
-          "https://scontent-frt3-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s750x750/98109208_248639346557335_5024508482649666703_n.jpg?_nc_ht=scontent-frt3-1.cdninstagram.com&_nc_cat=107&_nc_ohc=MpL9rWqaDX4AX_3t_IE&oh=17fe5450a120e1613f2e321ea4bdcee2&oe=5EFAC3F1",
-        url: "https://www.instagram.com/p/CAYF6wypQKg/",
+          "https://scontent-frt3-2.cdninstagram.com/v/t51.2885-15/e35/c120.0.716.716a/s320x320/97198571_1037979119931567_1032255416873476495_n.jpg?_nc_ht=scontent-frt3-2.cdninstagram.com&_nc_cat=103&_nc_ohc=XDWtZxf2pB8AX9wtubj&oh=166f949edd287ace5bb486d4fedd7b9d&oe=5F064CF9",
+        url: "https://www.instagram.com/p/CAFyAwiJSKa/",
       },
       {
         image:
-          "https://scontent-frt3-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s750x750/98109208_248639346557335_5024508482649666703_n.jpg?_nc_ht=scontent-frt3-1.cdninstagram.com&_nc_cat=107&_nc_ohc=MpL9rWqaDX4AX_3t_IE&oh=17fe5450a120e1613f2e321ea4bdcee2&oe=5EFAC3F1",
-        url: "https://www.instagram.com/p/CAYF6wypQKg/",
-      },
-      {
-        image:
-          "https://scontent-frt3-1.cdninstagram.com/v/t51.2885-15/sh0.08/e35/s750x750/98109208_248639346557335_5024508482649666703_n.jpg?_nc_ht=scontent-frt3-1.cdninstagram.com&_nc_cat=107&_nc_ohc=MpL9rWqaDX4AX_3t_IE&oh=17fe5450a120e1613f2e321ea4bdcee2&oe=5EFAC3F1",
-        url: "https://www.instagram.com/p/CAYF6wypQKg/",
+          "https://scontent-frt3-1.cdninstagram.com/v/t51.2885-15/e35/96419062_560983741224295_5141353574567235916_n.jpg?_nc_ht=scontent-frt3-1.cdninstagram.com&_nc_cat=107&_nc_ohc=HTkCsDmOBdcAX8Fkk7N&oh=beccacab237aaaca954b314cfba6e4cf&oe=5F06452E",
+        url: "https://www.instagram.com/p/CAFxHk7pJ6k/",
       },
     ],
   },
@@ -71,7 +66,7 @@ export const InstaGallery = () => {
         <Title>{title}</Title>
       </TitleArea>
       <Posts>
-        {posts.slice(0, 6).map((post) => {
+        {posts.map((post) => {
           return (
             <PostWrap>
               <a href={post.url}>

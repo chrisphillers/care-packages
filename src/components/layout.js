@@ -43,7 +43,7 @@ const SiteWrapper = styled.div`
 
 const Centre = styled.div`
   width: 100%;
-  max-width: 1440px;
+  max-width: 1200px;
   /* padding: 0 1.4rem; */
 
   @media (min-width: 1025px) {
