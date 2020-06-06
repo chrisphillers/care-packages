@@ -32,7 +32,9 @@ export const Header = () => {
     >
       <Top>
         <Nav>
-          <a href="/about-us">About us</a>
+          <a className="about" href="/about-us">
+            About us
+          </a>
           <DonateButton href="#donate">Donate</DonateButton>
         </Nav>
         <SocialLogos>
@@ -100,6 +102,11 @@ export const Nav = styled.nav`
 
   > * {
     margin: 1rem;
+  }
+
+  .about {
+    text-decoration: none;
+    color: ${theme.brandPrimary};
   }
 `;
 

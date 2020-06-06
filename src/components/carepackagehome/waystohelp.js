@@ -59,12 +59,13 @@ const HelpItem = styled.div`
   /* flex: 1; */
   width: 100%;
   /* flex-grow: 1; */
-  height: 400px;
+  height: 320px;
   /* width: 28%; */
   /* min-width: 300px; */
   /* justify-content: space-evenly; */
   background-color: ${(props) => props.content?.color};
   color: white;
+  font-size: calc(12px + (24 - 12) * ((100vw - 300px) / (1920 - 300)));
   h2 {
     text-transform: capitalise;
   }
@@ -72,7 +73,7 @@ const HelpItem = styled.div`
   @media (min-width: 767px) {
     flex-wrap: wrap;
     flex: 1;
-    font-size: calc(1px + (32 - 1) * ((100vw - 300px) / (1920 - 300)));
+    height: 400px;
     line-height: 2.3rem;
     padding: 1rem;
     justify-content: space-around;

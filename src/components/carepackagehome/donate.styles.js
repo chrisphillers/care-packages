@@ -103,7 +103,7 @@ export const Donation = styled.a`
   }
 
   h2 {
-    font-size: calc(22px + (35 - 22) * ((100vw - 300px) / (1920 - 300)));
+    font-size: calc(18px + (35 - 18) * ((100vw - 300px) / (1920 - 300)));
   }
 
   h3 {
