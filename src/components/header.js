@@ -8,38 +8,49 @@ import styled from "styled-components";
 import InfoArrow from "../../content/assets/svgs/info-arrow.svg";
 
 import { theme } from "../styles/theme";
-export const Header = () => (
-  <HeaderBlock
-  // style={{
-  //   display: "flex",
-  //   textTransform: "uppercase",
-  //   // paddingBottom: "150px",
-  //   justifyContent: "space-between",
-  //   backgroundColor: "white",
-  //   // height: "100%",
-  // }}
-  >
-    {console.log(window.location)}
-    <Top>
-      <Nav>
-        <a href="/about-us">About us</a>
-        <DonateButton href="#donate">Donate</DonateButton>
-      </Nav>
-      <SocialLogos>
-        {/* <img src="../../content/assets/svgs/twitter.svg"></img> */}
-        <Twitter></Twitter>
-        <a href="https://www.facebook.com/Care-Packages-104068491271279/">
-          <Facebook></Facebook>
-        </a>
-        <a href="https://www.instagram.com/uk.care.packages/">
-          <Instagram></Instagram>
-        </a>
-      </SocialLogos>
-    </Top>
-    <InfoArrow fill="black" color="black"></InfoArrow>
-    {/* <img src="../../content/assets/svgs/info-arrow.svg"></img> */}
-  </HeaderBlock>
-);
+export const Header = () => {
+  const [aboutUsRender, setAboutUsRender] = React.useState(false);
+  // let aboutUsRender = false;
+
+  React.useEffect(() => {
+    window.location.pathname === "/about-us"
+      ? setAboutUsRender(true)
+      : setAboutUsRender(false);
+  }, []);
+  console.log(aboutUsRender);
+  return (
+    <HeaderBlock
+      aboutUsRender={aboutUsRender}
+      // style={{
+      //   display: "flex",
+      //   textTransform: "uppercase",
+      //   // paddingBottom: "150px",
+      //   justifyContent: "space-between",
+      //   backgroundColor: "white",
+      //   // height: "100%",
+      // }}
+    >
+      <Top>
+        <Nav>
+          <a href="/about-us">About us</a>
+          <DonateButton href="#donate">Donate</DonateButton>
+        </Nav>
+        <SocialLogos>
+          {/* <img src="../../content/assets/svgs/twitter.svg"></img> */}
+          <Twitter></Twitter>
+          <a href="https://www.facebook.com/Care-Packages-104068491271279/">
+            <Facebook></Facebook>
+          </a>
+          <a href="https://www.instagram.com/uk.care.packages/">
+            <Instagram></Instagram>
+          </a>
+        </SocialLogos>
+      </Top>
+      <InfoArrow fill="black" color="black"></InfoArrow>
+      {/* <img src="../../content/assets/svgs/info-arrow.svg"></img> */}
+    </HeaderBlock>
+  );
+};
 
 export const SocialLogos = styled.div`
   margin: 1rem;
@@ -61,19 +72,34 @@ export const SocialLogos = styled.div`
     }
   }
 
+  @media (min-width: 767px) {
+    svg {
+      height: 3rem;
+      margin: 0.7rem;
+    }
+  }
+
   /* display: none; */
 `;
 
 export const Nav = styled.nav`
   display: flex;
   align-items: center;
-
+  font-size: calc(10px + (40 - 10) * ((100vw - 300px) / (1920 - 300)));
   /* justify-content: flex-start; */
   /* margin: 1rem; */
   /* padding: 2rem; */
 
   > * {
     margin: 0.6rem;
+  }
+
+  @media (min-width: 767px) {
+    margin: 2rem;
+  }
+
+  > * {
+    margin: 1rem;
   }
 `;
 
@@ -92,19 +118,21 @@ export const DonateButton = styled.a`
     background: lightgrey;
     color: ${theme.brandPrimary};
   }
+  @media (min-width: 767px) {
+    padding: 0.6rem 2rem;
+  }
 `;
 
-export const HeaderBlock = styled.header`
+export const HeaderBlock = styled.div`
   background-color: white;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  height: ${window.location.pathname === "/about-us" ? "70px" : "80vh"};
+  height: ${({ aboutUsRender }) => (aboutUsRender ? "70px" : "80vh")};
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   padding-bottom: 4rem;
-  background-image: url(${window.location.pathname === "/about-us"
-    ? null
-    : heroPic});
+  background-image: url(${({ aboutUsRender }) =>
+    aboutUsRender ? null : heroPic});
 `;

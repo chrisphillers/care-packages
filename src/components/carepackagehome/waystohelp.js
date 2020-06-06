@@ -72,7 +72,7 @@ const HelpItem = styled.div`
   @media (min-width: 767px) {
     flex-wrap: wrap;
     flex: 1;
-    font-size: calc(1px + (43 - 1) * ((100vw - 300px) / (1920 - 300)));
+    font-size: calc(1px + (32 - 1) * ((100vw - 300px) / (1920 - 300)));
     line-height: 2.3rem;
     padding: 1rem;
     justify-content: space-around;
