@@ -32,9 +32,16 @@ export const Header = () => {
     >
       <Top>
         <Nav>
-          <a className="about" href="/about-us">
-            About us
-          </a>
+          {aboutUsRender ? (
+            <a className="about" href="/">
+              Home
+            </a>
+          ) : (
+            <a className="about" href="/about-us">
+              About us
+            </a>
+          )}
+
           <DonateButton href="#donate">Donate</DonateButton>
         </Nav>
         <SocialLogos>
@@ -93,21 +100,25 @@ export const SocialLogos = styled.div`
 `;
 
 export const Nav = styled.nav`
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 7rem;
   font-size: calc(10px + (26 - 10) * ((100vw - 300px) / (1920 - 300)));
   /* justify-content: flex-start; */
   /* margin: 1rem; */
   /* padding: 2rem; */
 
   > * {
-    margin: 0.6rem;
+    /* margin: 0.6rem; */
   }
 
   @media (min-width: 767px) {
     margin: 2rem;
   }
-
+  width: 20rem;
   > * {
-    margin: 1rem;
+    /* margin: 1rem; */
   }
 
   .about {

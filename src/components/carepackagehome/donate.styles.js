@@ -89,6 +89,17 @@ export const Donation = styled.a`
   }
 
   :hover {
+    span {
+      /* padding: 1rem 1rem;
+      background-color: white; */
+
+      h2 {
+        color: lightgrey;
+      }
+    }
+  }
+
+  :hover {
     h2 {
       color: white;
     }

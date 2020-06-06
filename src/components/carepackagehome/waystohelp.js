@@ -76,7 +76,7 @@ const HelpItem = styled.div`
     height: 400px;
     line-height: 2.3rem;
     padding: 1rem;
-    justify-content: space-around;
+    justify-content: space-evenly;
   }
 `;
 
