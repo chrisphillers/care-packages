@@ -14,6 +14,7 @@ export const WaysToHelpText = () => (
     <div
       style={{
         flexDirection: "column",
+        padding: "0.4rem",
       }}
     >
       <h1>Other ways you can help</h1>

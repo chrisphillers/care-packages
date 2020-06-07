@@ -59,6 +59,14 @@ const localData = {
 
 export const InstaGallery = () => {
   const { title, sub_title, posts } = localData.lowerInfo;
+  const [postSlice, setPostSlice] = React.useState(null);
+
+  React.useEffect(() => {
+    if (localData.lowerInfo)
+      window.innerWidth > 767
+        ? setPostSlice(localData.lowerInfo.posts)
+        : setPostSlice(localData.lowerInfo.posts.slice(0, 3));
+  }, [window.innerWidth, postSlice]);
   return (
     <LowerInfoContainer>
       <TitleArea href="https://www.instagram.com/uk.care.packages/">
@@ -66,7 +74,7 @@ export const InstaGallery = () => {
         <Title>{title}</Title>
       </TitleArea>
       <Posts>
-        {posts.map((post) => {
+        {postSlice?.map((post) => {
           return (
             <PostWrap>
               <a href={post.url}>
@@ -156,6 +164,7 @@ export const Post = styled.img`
 export const PostWrap = styled.div`
   overflow: hidden;
   width: 100%;
+
   /* height: auto; */
 
   @media (min-width: 767px) {

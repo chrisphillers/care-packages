@@ -103,8 +103,8 @@ export const Nav = styled.nav`
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  width: 7rem;
-  font-size: calc(10px + (26 - 10) * ((100vw - 300px) / (1920 - 300)));
+  width: 12rem;
+  font-size: calc(12px + (26 - 12) * ((100vw - 300px) / (1920 - 300)));
   /* justify-content: flex-start; */
   /* margin: 1rem; */
   /* padding: 2rem; */
@@ -115,8 +115,9 @@ export const Nav = styled.nav`
 
   @media (min-width: 767px) {
     margin: 2rem;
+    width: 20rem;
   }
-  width: 20rem;
+
   > * {
     /* margin: 1rem; */
   }
@@ -153,12 +154,18 @@ export const HeaderBlock = styled.div`
   background-color: white;
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: center -20px;
-  height: ${({ aboutUsRender }) => (aboutUsRender ? "70px" : "80vh")};
+
+  background-position: center;
+  height: ${({ aboutUsRender }) => (aboutUsRender ? "0px" : "80vh")};
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   /* padding-bottom: 4rem; */
   background-image: url(${({ aboutUsRender }) =>
     aboutUsRender ? null : heroPic});
+
+  @media (min-width: 767px) {
+    padding: 0.6rem 2rem;
+    background-position: center -20px;
+  }
 `;
