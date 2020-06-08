@@ -32,7 +32,7 @@ export const HeroText = styled.div`
   justify-content: space-around;
   flex-direction: column;
   p {
-    font-size: calc(16px + (31 - 16) * ((100vw - 300px) / (1920 - 300)));
+    font-size: calc(16px + (24 - 16) * ((100vw - 300px) / (1920 - 300)));
   }
   @media (min-width: 767px) {
     padding: 0 4rem;
@@ -68,13 +68,13 @@ export const HeaderContainer = styled.div`
   margin-top: 2rem;
 
   svg {
-    height: calc(70px + (90 - 70) * ((100vw - 300px) / (1920 - 300)));
+    height: calc(70px + (80 - 70) * ((100vw - 300px) / (1920 - 300)));
     fill: ${theme.brandSecondary};
     margin-bottom: 0.6rem;
   }
 
   h2 {
-    font-size: calc(16px + (36 - 16) * ((100vw - 300px) / (1920 - 300)));
+    font-size: calc(16px + (32 - 16) * ((100vw - 300px) / (1920 - 300)));
     text-transform: capitalize;
   }
 

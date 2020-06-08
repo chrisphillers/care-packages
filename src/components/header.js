@@ -104,7 +104,7 @@ export const Nav = styled.nav`
   justify-content: space-evenly;
   align-items: center;
   width: 12rem;
-  font-size: calc(12px + (26 - 12) * ((100vw - 300px) / (1920 - 300)));
+  font-size: calc(12px + (20 - 12) * ((100vw - 300px) / (1920 - 300)));
   /* justify-content: flex-start; */
   /* margin: 1rem; */
   /* padding: 2rem; */

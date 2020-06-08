@@ -110,7 +110,7 @@ export const Posts = styled.div`
   }
 `;
 export const Title = styled.div`
-  font-size: calc(20px + (35 - 20) * ((100vw - 300px) / (1920 - 300)));
+  font-size: calc(20px + (24 - 20) * ((100vw - 300px) / (1920 - 300)));
   /* padding-bottom: 1rem; */
   padding: 0 1rem;
   line-height: 2rem;
@@ -176,6 +176,6 @@ export const PostWrap = styled.div`
 
 export const Thanks = styled.div`
   text-transform: uppercase;
-  font-size: calc(14px + (22 - 14) * ((100vw - 300px) / (1920 - 300)));
+  font-size: calc(14px + (19 - 14) * ((100vw - 300px) / (1920 - 300)));
   color: ${theme.brandPrimary};
 `;

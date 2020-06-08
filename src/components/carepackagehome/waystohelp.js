@@ -65,7 +65,7 @@ const HelpItem = styled.div`
   /* justify-content: space-evenly; */
   background-color: ${(props) => props.content?.color};
   color: white;
-  font-size: calc(12px + (20 - 12) * ((100vw - 300px) / (1920 - 300)));
+  font-size: calc(12px + (16 - 12) * ((100vw - 300px) / (1920 - 300)));
   h2 {
     text-transform: capitalise;
   }

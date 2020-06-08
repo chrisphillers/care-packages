@@ -33,7 +33,7 @@ export const DonateTextContainer = styled.div`
   /* justify-content: space-around; */
   /* flex-direction: column; */
 
-  font-size: calc(16px + (30 - 16) * ((100vw - 300px) / (1920 - 300)));
+  font-size: calc(16px + (24 - 16) * ((100vw - 300px) / (1920 - 300)));
 
   > * {
     /* color: white; */
@@ -54,14 +54,14 @@ export const Title = styled.div`
   margin-bottom: 3rem;
   h2 {
     text-transform: uppercase;
-    font-size: calc(30px + (60 - 30) * ((100vw - 300px) / (1920 - 300)));
+    font-size: calc(30px + (50 - 30) * ((100vw - 300px) / (1920 - 300)));
     margin: 0;
   }
   p {
     color: white;
     /* text-transform: uppercase; */
     margin: 0.4rem;
-    font-size: calc(16px + (24 - 16) * ((100vw - 300px) / (1920 - 300)));
+    font-size: calc(16px + (22 - 16) * ((100vw - 300px) / (1920 - 300)));
   }
 
   .subsub {
@@ -114,7 +114,7 @@ export const Donation = styled.a`
   }
 
   h2 {
-    font-size: calc(18px + (35 - 18) * ((100vw - 300px) / (1920 - 300)));
+    font-size: calc(18px + (32 - 18) * ((100vw - 300px) / (1920 - 300)));
   }
 
   h3 {
