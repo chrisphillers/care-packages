@@ -17,7 +17,7 @@ export const Header = () => {
       ? setAboutUsRender(true)
       : setAboutUsRender(false);
   }, []);
-  console.log(aboutUsRender);
+  // console.log(aboutUsRender);
   return (
     <HeaderBlock
       aboutUsRender={aboutUsRender}

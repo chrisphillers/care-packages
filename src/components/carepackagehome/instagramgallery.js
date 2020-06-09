@@ -66,7 +66,7 @@ export const InstaGallery = () => {
       window.innerWidth > 767
         ? setPostSlice(localData.lowerInfo.posts)
         : setPostSlice(localData.lowerInfo.posts.slice(0, 3));
-  }, [window.innerWidth, postSlice]);
+  }, [postSlice]);
   return (
     <LowerInfoContainer>
       <TitleArea href="https://www.instagram.com/uk.care.packages/">
